@@ -19,5 +19,5 @@ cid=$(docker run -d --log-driver=awslogs --log-opt awslogs-group=$AWS_LOGS_GROUP
 
 Read logs via boto -- logs come back, slightly out of order (same as on aws console)
 ```
-docker run -it -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY awslogstest /usr/bin/python /viewer.py --group=$AWS_LOGS_GROUP --stream=$cid
+docker run -it -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY awslogtest /usr/bin/python /viewer.py --group=$AWS_LOGS_GROUP --stream=$cid
 ```
